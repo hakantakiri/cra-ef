@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## References
+
+https://medium.com/free-code-camp/building-an-electron-application-with-create-react-app-97945861647c
+
 ## Available Scripts
 
 In the project directory, you can run:
