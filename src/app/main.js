@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
-const { url } = require('inspector');
 const path = require('path');
+
+const url = require('url')
 
 const createWindow = () => {
     // Create the browser window.
@@ -13,7 +14,7 @@ const createWindow = () => {
     // mainWindow.loadFile('../../public/index.html');
 
     const startUrl = process.env.ELECTRON_HTML_URL || url.format({
-      pathname: path.join(__dirname, '/../build/index.html'),
+      pathname: path.join(__dirname, '../../build/index.html'),
       protocol: 'file',
       slashes: true
     })
