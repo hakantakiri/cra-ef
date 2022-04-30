@@ -1,0 +1,44 @@
+const { app, BrowserWindow } = require('electron');
+const { url } = require('inspector');
+const path = require('path');
+
+const createWindow = () => {
+    // Create the browser window.
+    const mainWindow = new BrowserWindow({
+      width: 800,
+      height: 600,
+    });
+  
+    // and load the index.html of the app.
+    // mainWindow.loadFile('../../public/index.html');
+
+    const startUrl = process.env.ELECTRON_HTML_URL || url.format({
+      pathname: path.join(__dirname, '/../build/index.html'),
+      protocol: 'file',
+      slashes: true
+    })
+
+    mainWindow.loadURL(startUrl);
+  
+    // Open the DevTools.
+    mainWindow.webContents.openDevTools();
+  };
+
+
+  app.on('ready', createWindow);
+
+
+  app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+      app.quit();
+    }
+  });
+
+  app.on('activate', () => {
+    // On OS X it's common to re-create a window in the app when the
+    // dock icon is clicked and there are no other windows open.
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow();
+    }
+  });
+  
