@@ -136,7 +136,7 @@ app.on("activate", () => {
 }
 ```
 
-You now should now have the same template.
+You now should have the same template.
 
 ## References
 
