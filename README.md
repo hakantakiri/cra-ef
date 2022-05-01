@@ -1,6 +1,6 @@
 # Electron Forge & Create React App Template
 
-Template for creating Electron apps using two popular frameworks: [Create React App](https://create-react-app.dev/) and [Electron Forge](https://www.electronforge.io/).
+Template for creating Electron apps using two popular frameworks: [Create React App](https://create-react-app.dev/) and [Electron Forge](https://www.electronforge.io/) with no extra dependencies.
 
 ## Preface
 
@@ -8,7 +8,7 @@ Electron has become a popular tool for building desktop apps for Windows, macOS 
 
 As of 2022, great frameworks have made and easy entrypoint for new developers to these technologies. Create React App is a popular framework for building React projects offering helpful functionalities as hot reloading or basically non existing configuration or knowledge requirements for webpack or babel. On the other hand, Electron Forge framework achieves similar advantages for Electron.
 
-This template is an attempt to provide a ready to use boilerplate for using both previously mention frameworks.
+This template is an attempt to provide a ready to use boilerplate for using both previously mention frameworks without any other dependency.
 
 # How to use
 
@@ -39,7 +39,7 @@ npm start
 npm run electron
 ```
 
-This can be simplified using another dependencies such as `foreman`, but this template aims to avoid using any other dependency apart from what is already used inside the frameworks.
+This can be simplified using another dependencies such as `foreman`, but this template aims to avoid using any other dependency apart from what is already used inside the frameworks without the use no external dependency appart
 
 ## How to build
 
@@ -105,7 +105,7 @@ app.on("activate", () => {
 ```
 
 4. Install Electron Forge using the "Importing Existing project" guide [here at it's website.](https://www.electronforge.io/import-existing-project)
-5. Add the next block of json key-value pairs or replace them if any already exists at `package.json`. Use your own description, author info and license.
+5. Add the next block of json key-value pairs or replace them if any already exists at `package.json`. Don't change what is set to main and homepage in the following json data, but use your own description, author info and license.
 
 ```json
 "main": "src/main.js",
