@@ -39,7 +39,7 @@ npm start
 npm run electron
 ```
 
-This can be simplified using another dependencies such as `foreman`, but this template aims to avoid using any other dependency apart from what is already used inside the frameworks without the use no external dependency appart
+This can be simplified using another dependencies such as `foreman`, but this template aims to avoid using any other dependency apart from what is already required inside the frameworks.
 
 ## How to build
 
