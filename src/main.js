@@ -14,7 +14,7 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  const startUrl = process.env.ELECTRON_HTML_URL || url.format({
+  const startUrl = process.env.WEB_URL || url.format({
     pathname: path.join(__dirname, '../build/index.html'),
     protocol: 'file',
     slashes: true
