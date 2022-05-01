@@ -108,7 +108,7 @@ app.on("activate", () => {
 5. Add the next block of json key-value pairs or replace them if any already exists at `package.json`. Use your own description, author info and license.
 
 ```json
-"main": "src/app/main.js",
+"main": "src/main.js",
 "description": "Electron Forge meets Create React App",
 "author": {
     "name": "Your name",
