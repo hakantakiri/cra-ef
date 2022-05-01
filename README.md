@@ -71,11 +71,15 @@ const createWindow = () => {
 	const mainWindow = new BrowserWindow({
 		width: 800,
 		height: 600,
+		webPreferences: {
+			nodeIntegration: true,
+			contextIsolation: false,
+		},
 	})
 
-	// and load React or the index.html of the app
+	// and load the index.html of the app.
 	const startUrl =
-		process.env.ELECTRON_HTML_URL ||
+		process.env.WEB_URL ||
 		url.format({
 			pathname: path.join(__dirname, "../build/index.html"),
 			protocol: "file",
@@ -126,9 +130,9 @@ app.on("activate", () => {
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "ELECTRON_HTML_URL=http://localhost:3000 electron .",
+    "electron": "WEB_URL=http://localhost:3000 electron .",
     "electron-prd": "electron .",
-    "electron-forge": "ELECTRON_HTML_URL=http://localhost:3000 electron-forge start",
+    "electron-forge": "WEB_URL=http://localhost:3000 electron-forge start",
     "electron-forge-prd": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
