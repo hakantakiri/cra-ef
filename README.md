@@ -113,7 +113,7 @@ app.on("activate", () => {
 
 ```json
 "main": "src/main.js",
-"description": "Electron Forge meets Create React App",
+"description": "Electron Forge & Create React App Template",
 "author": {
     "name": "Your name",
     "email": "your@em.ail"
