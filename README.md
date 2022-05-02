@@ -2,6 +2,8 @@
 
 Template for creating Electron apps using two popular frameworks: [Create React App](https://create-react-app.dev/) and [Electron Forge](https://www.electronforge.io/) with no extra dependencies.
 
+> For a version of this template with React in Typescript visit [this other repo.](https://github.com/hakantakiri/crats-ef)
+
 ## Preface
 
 Electron has become a popular tool for building desktop apps for Windows, macOS and some distributions of Linux. It allows the use of web technologies in the development process, hence, anyone can use their preferred web tools to have a better development experience, React falls in the category of a very preferred web technology.
@@ -138,6 +140,13 @@ app.on("activate", () => {
     "make": "electron-forge make",
     "build-all": "npm run build; npm run make"
 }
+```
+
+7. Add `/out` to your `.gitignore` file
+
+```
+# Electron Forge
+/out
 ```
 
 You now should have the same template.
