@@ -128,7 +128,7 @@ app.on("activate", () => {
 
 ```json
 "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
